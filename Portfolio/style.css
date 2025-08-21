@@ -1,0 +1,773 @@
+/* ------------------- reset defaults ---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* -------------------- Dark Theme (default) ------------------  */
+
+:root {
+  --primary-color: #001123;
+  --primaryLite-color: #082f4e;
+  --text-color: #fff;
+  --span-color: #00FFFF;
+  --icon-color: #eff6e0;
+  --skill-icon: #F86C04;
+  --navName-color: #fff;
+  --name-color: #ffffff;
+  --divider-sColor: #7e7e7e;
+  --divider-mColor: #434343;
+  --role-color: #F86C04;
+  --box-shadow: #367c81;
+  --inputBox-color: #000;
+  --Client-button: #df680c;
+  --Client-hover: #f87204;
+  --theme-btn: red;
+  --ClientBTN-text-color: #fff;
+  --profile-M-bgColor: #001123;
+  --profile-S-bgColor: #082f4e;
+  --project-border: #fff;
+  --navBar-color: #F86C04;
+  /* --menu-color : #fff ; */
+  --menu-color: #082f4e;
+}
+
+/* ---------------- Light Theme -------------- */
+
+body.light {
+  --primary-color: #ffffff;
+  --primaryLite-color: #f0f0f0;
+  --text-color: #212529;
+  --span-color: #0091ff;
+  --span-color: #0091ff;
+  --icon-color: #003054;
+  --skill-icon: #E36309;
+  --navName-color: #171717;
+  --name-color: #003054;
+  --divider-sColor: #004c61;
+  --divider-mColor: #016992;
+  --role-color: #28BCFD;
+  --box-shadow: #ababab;
+  --inputBox-color: #000;
+  --Client-button: #082f4e;
+  --Client-hover: #003b6b;
+  --ClientBTN-text-color: #ffffff;
+  --project-border: #0091ff;
+  --navBar-color: #082f4e;
+  --menu-color: #fff;
+
+}
+
+/* ===================== Layout ============================== */
+
+body {
+  width: 100vw;
+  background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+span {
+  color: var(--span-color);
+}
+
+ion-icon {
+  font-size: 1.8rem;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+
+ion-icon:hover {
+  color: var((--primary-color));
+  scale: 1.2;
+}
+
+/* =========== wrapper =========== */
+
+.container {
+  max-width: 1300px;
+  height: 78vh;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 85px 430px 1fr;
+  margin: 0 auto;
+}
+
+/* ================== Nav-Bar =================== */
+
+/* ------------- theme switching button ------------- */
+.theme {
+  box-shadow: 0 0 20px var(--box-shadow);
+  background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+  width: 100%;
+  height: 10vh;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.theme-btn ion-icon {
+  margin-top: 10px;
+}
+
+
+.theme-btn {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+  border-radius: 15px;
+  border: none;
+}
+
+
+#nav-bar {
+  box-shadow: 0 0 20px var(--box-shadow);
+  width: 100%;
+  border-radius: 15px;
+  background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+}
+
+
+.nav-name {
+  color: var(--navName-color);
+}
+
+
+#menu-bar ion-icon {
+  color: var(--menu-color);
+  font-size: 2rem;
+}
+
+#nav-bar a:hover {
+  color: var((--primary-color));
+  scale: 1.1;
+}
+
+.icons a {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+/* ------------- divider line b/w div ---------------- */
+
+.ltr {
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 25px;
+  background: radial-gradient(ellipse at right, var(--divider-sColor), var(--divider-mColor));
+}
+
+
+
+
+
+/* ================ profile Layout ================ */
+
+.profile {
+  box-shadow: 0 0 20px var(--box-shadow);
+  background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+  border-radius: 15px;
+  height: 78vh;
+}
+
+/* --------------- Cover-Img ----------- */
+
+#cover-img {
+  border-radius: 15px 15px 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 72% 100%, 28% 100%, 0 65%);
+  animation: crop 1s ease 1s;
+}
+
+#cover-img:hover {
+  scale: 1.03;
+}
+
+/* --------------- profile-Img ----------- */
+
+#profile-img {
+  width: 25%;
+  border-radius: 10%;
+  transform: translate(160px, -80px);
+}
+
+/* -------------------------- My-Name ---------------------- */
+#name {
+  font-size: 28px;
+  color: var(--name-color);
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  line-height: 1.5em;
+
+}
+
+/* ------------ position (Backend- Developer) --------------- */
+
+#role {
+  color: var(--role-color);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+/* ------------------ Resume(download) & Contact-Me Button ---------------- */
+
+.CTA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  margin: 2vh;
+}
+
+.CTA a {
+  gap: 8px;
+  color: var(--name-color);
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.CTA div:hover {
+  scale: 1.05;
+  color: var(--name-color);
+}
+
+/* =========================== Content Layout ======================= */
+
+.content {
+  box-shadow: 0 0 20px var(--box-shadow);
+  background: radial-gradient(var(--primaryLite-color) 0%, var(--primary-color) 100%);
+  border-radius: 15px;
+  height: 78vh;
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.content::-webkit-scrollbar {
+  width: 1px;
+}
+
+.heading {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5em;
+  margin-left: 15px;
+}
+
+/* -------------- Skills section -------------- */
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 140px;
+}
+
+.skill-card {
+  box-shadow: 0 0 3px var(--span-color);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+}
+
+
+.skill-icon ion-icon {
+  color: var(--skill-icon);
+}
+
+/* ------------Progress Bar ------------- */
+
+.progressBar {
+  padding: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+progress {
+  margin: 12px 0 0 10px;
+}
+
+/* ------------- Projects ------------ */
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 150px;
+}
+
+.project-photo {
+  text-align: center;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.one {
+  grid-column: 1/4;
+}
+
+.three {
+  grid-column: 2/4;
+}
+
+.four {
+  grid-column: 1/3;
+}
+
+.five {
+  grid-column: 3/4;
+}
+
+.project-photo img {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  height: auto;
+  display: block;
+}
+
+.prepmate:hover {
+  opacity: 0.5;
+}
+
+
+/* --------------- Contact Me Section ---------- */
+
+.contact-section {
+  padding: 15px;
+  margin: 15px;
+  margin-bottom: 5px;
+}
+
+.contact-container {
+  height: 250px;
+  padding: 15px;
+  margin-bottom: 150px;
+}
+
+
+input {
+  width: 100%;
+  height: 35px;
+  margin: 2px 0;
+  color: var(--inputBox-color);
+  padding: 10px;
+  border: 2px solid var(--span-color);
+}
+
+input::placeholder {
+  font-size: 1.1em;
+}
+
+textarea {
+  color: var(--inputBox-color);
+  border: 2px solid var(--span-color);
+  font-size: 1em;
+  padding: 10px 0 0 10px;
+  margin: 2px 0;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 25px;
+}
+
+#client-btn {
+  padding: 5px 35px;
+  border: none;
+  display: inline;
+  float: right;
+  border-radius: 5px;
+  background-color: var(--Client-button);
+  color: var(--ClientBTN-text-color);
+}
+
+#client-btn:hover {
+  background-color: var(--Client-hover);
+  scale: 1.02;
+
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+
+}
+
+.social-links {
+  margin-right: 10px;
+}
+
+/* ----------------- Map ----------------- */
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card {
+  border-radius: 15px;
+  text-align: center;
+  width: 95%;
+  height: 350px;
+  margin-bottom: 10px;
+  border: 2px solid var(--span-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------- Footer ------------------- */
+
+footer {
+  height: 50px;
+  background-color: var(--primaryLite-color);
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.section-container {
+  margin: 20px;
+}
+
+
+/* ========================== Mobile-Nav  =============================== */
+
+#navMenu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  top: 0;
+}
+
+#mobNav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+li {
+  padding: 20px;
+  font-size: 1.8rem;
+}
+
+
+
+/* ========================== Animation  =============================== */
+
+#socket {
+  filter: invert(100%);
+}
+
+.skill-card:hover ion-icon {
+  scale: 1.4;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+#mongodb {
+  transform: translate(45px, -12px) rotate(45deg);
+  margin-top: 20px;
+}
+
+.skill-card:hover #mongodb {
+  animation-name: leafFloat;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.project1 {
+  animation: stagger 2s ease-in-out forwards;
+  animation-timeline: view();
+  order: 1;
+  animation-range: entry 10% cover 50%;
+}
+
+.project2 {
+  animation: stagger 2s ease-in-out forwards;
+  animation-timeline: view();
+  order: 2;
+  animation-range: entry 0% cover 60%;
+}
+
+.skill-card:hover #socket {
+  scale: 1.2;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+
+}
+
+.skill-card:hover #mongoose {
+  scale: 1.2;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+
+}
+
+.skill-card:hover #express {
+  scale: 1.2;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+
+}
+
+@keyframes leafFloat {
+  from {
+    transform: translate(50px, -50px) rotate(-45deg);
+    opacity: 0;
+  }
+
+  to {
+
+    transform: translate(45px, -12px) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  from {
+
+    transform: rotate(0deg)
+  }
+
+  to {
+
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes crop {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+
+@keyframes stagger {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY();
+    opacity: 1;
+
+  }
+}
+
+
+/* ========================== Responsiveness =============================== */
+
+/* ------------------- for Desktop -------------------- */
+
+@media (min-width : 1030px) {
+
+
+  .container {
+    grid-template-columns: 85px 430px 1fr;
+  }
+
+  .skill-card:nth-child(7) {
+    grid-column: 3/5;
+    grid-row: 2/4;
+    height: 100%;
+  }
+
+}
+
+/* ------------------- for tablets -------------------- */
+
+
+@media (min-width : 769px) and (max-width :1280px) {
+
+  body {
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    grid-template-columns: 85px 1fr;
+    margin: 20px;
+  }
+
+
+  .profile {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: auto;
+  }
+
+  .content {
+    height: auto;
+    overflow: visible;
+
+  }
+
+   .content {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    height: 100%;
+    overflow: visible;
+
+  }
+
+
+
+  .skills {
+    margin-top: 20px;
+  }
+
+  .skill-card:nth-child(7) {
+    grid-column: 1/5;
+    grid-row: 5/7;
+    height: 100%;
+  }
+
+}
+
+/* ------------------- for mobile -------------------- */
+
+@media (max-width : 768px) {
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 0px 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .profile{
+    height: max-content;
+  }
+
+  #navMenu {
+    display: block;
+    background-color: var(--navBar-color);
+    z-index: 1000;
+    transform: translateX(-8px);
+  }
+
+  #mobNav {
+    background: radial-gradient(var(--primaryLite-color), var(--primary-color));
+  }
+
+  #nav-bar {
+    display: none;
+  }
+
+  .theme {
+    display: none;
+    z-index: 99;
+    box-shadow: none;
+  }
+
+  .content {
+    grid-row: 3/4;
+    height: 100%;
+    overflow: visible;
+
+  }
+
+  .skill-card:nth-child(7) {
+    grid-column: 1/3;
+    grid-row: 5/7;
+    height: 100%;
+  }
+
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .skill-card {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .skill-icon {
+    padding: 15px;
+  }
+
+  #mongodb {
+    align-self: center;
+    margin-right: 0 auto;
+    width: 40px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(45px, -12px) rotate(45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0, 0) rotate(90deg);
+    opacity: 1;
+
+  }
+
+}
+
+/* ====================== Responsiveness Ends =================== */
